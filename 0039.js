@@ -22,4 +22,4 @@ function tribonacci(signature, n) {
 	}
 }
 
-tribonacci([300, 200, 100], 0);
+tribonacci([1, 1, 1], 1);
