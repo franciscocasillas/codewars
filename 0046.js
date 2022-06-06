@@ -15,4 +15,4 @@ function incrementString(strng) {
 	}
 }
 
-incrementString("foo");
+incrementString("foo99");
