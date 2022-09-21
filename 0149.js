@@ -8,4 +8,4 @@ function calculateYears(principal, interest, tax, desired) {
 	console.log(years);
 }
 
-calculateYears(1000, 0.05, 0.18, 1100);
+calculateYears(20, 0.5, 0.3, 10);
