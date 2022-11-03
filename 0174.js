@@ -12,11 +12,18 @@ function incrementString(strng) {
 			i--;
 		}
 	}
+	console.log(digits);
 	if (digits.length > 0) {
 		let lastDigit = Number(digits[digits.length - 1]) + 1;
-		digits.pop();
-		digits.push(lastDigit);
-		console.log(strong.concat(digits).join(""));
+		console.log(lastDigit);
+		console.log(lastDigit.toString().length);
+		if (lastDigit.toString().length > 1) {
+			digits.splice(digits.length - 1, lastDigit.length, lastDigit);
+			console.log(strong.concat(digits).join(""));
+		} else {
+			digits.splice(digits.length - 1, 1, lastDigit);
+			console.log(strong.concat(digits).join(""));
+		}
 	} else {
 		strong.push("1");
 		console.log(strong.join(""));
@@ -25,4 +32,4 @@ function incrementString(strng) {
 
 //Not pay attention to zeros!!!!
 
-incrementString("foobar99");
+incrementString("foobar009");
