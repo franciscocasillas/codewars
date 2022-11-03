@@ -9,11 +9,20 @@ function incrementString(strng) {
 		} else {
 			digits.push(strong[i]);
 			strong.splice(i, 1);
+			i--;
 		}
 	}
-	let lastDigit = Number(digits.join("")) + 1;
-	strong.push(lastDigit);
-	console.log(strong.join(""));
+	if (digits.length > 0) {
+		let lastDigit = Number(digits[digits.length - 1]) + 1;
+		digits.pop();
+		digits.push(lastDigit);
+		console.log(strong.concat(digits).join(""));
+	} else {
+		strong.push("1");
+		console.log(strong.join(""));
+	}
 }
 
-incrementString("foo1");
+//Not pay attention to zeros!!!!
+
+incrementString("foobar99");
