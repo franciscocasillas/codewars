@@ -14,11 +14,15 @@ function incrementString(strng) {
 	}
 	console.log(digits);
 	if (digits.length > 0) {
-		let lastDigit = Number(digits[digits.length - 1]) + 1;
-		console.log(lastDigit);
+		let lastDigit = Number(digits.join("")) + 1;
 		console.log(lastDigit.toString().length);
 		if (lastDigit.toString().length > 1) {
-			digits.splice(digits.length - 1, lastDigit.length, lastDigit);
+			let digitSize = lastDigit.toString().length;
+			digits.splice(
+				digits.length - lastDigit.toString().length,
+				digitSize,
+				lastDigit
+			);
 			console.log(strong.concat(digits).join(""));
 		} else {
 			digits.splice(digits.length - 1, 1, lastDigit);
@@ -30,6 +34,6 @@ function incrementString(strng) {
 	}
 }
 
-//Not pay attention to zeros!!!!
+//Make good splice!!!
 
-incrementString("foobar009");
+incrementString("foobar99");
