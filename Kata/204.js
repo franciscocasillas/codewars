@@ -3,10 +3,19 @@
 // "Dermatoglyphics" --> true "aba" --> false "moOse" --> false (ignore letter case)
 
 function isIsogram(str) {
-	let letters = str.split("");
+	let letters = str.toLowerCase().split("");
+	let arr = [];
 	for (let i = 0; i < letters.length; i++) {
-		let counter = 0;
+		if (arr.includes(letters[i])) {
+		} else {
+			arr.push(letters[i]);
+		}
+	}
+	if (arr.length === letters.length) {
+		console.log("true");
+	} else {
+		console.log("false");
 	}
 }
 
-isIsogram("Dermatoglyphics");
+isIsogram("Maximiliano");
